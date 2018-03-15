@@ -1,6 +1,4 @@
-
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Deck 
 {
@@ -10,6 +8,8 @@ public class Deck
 	
 	public Deck(String [] ranks, String [] suits, int [] pointValues) 
 	{
+		this.unDealt<Card> = 
+		
 		for(int i = 0; i < suits.length; i++) 
 		{
 			for(int k = 0; k < ranks.length; k++) 
@@ -42,7 +42,7 @@ public class Deck
 		}
 		else return null;
 	}
-	
+/*	
 	public shuffle() 
 	{	
 		unDealt.addAll(Dealt);
@@ -61,5 +61,5 @@ public class Deck
 			Card temp = cardz[i];
 			
 		}
-	}
+	}*/
 }
