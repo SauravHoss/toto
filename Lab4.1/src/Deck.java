@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,12 +8,15 @@ public class Deck
 	private ArrayList <Card> Dealt;
 
 	
-	public Deck(Array ranks, Array suits, Array pointValues) 
+	public Deck(String [] ranks, String [] suits, int [] pointValues) 
 	{
-		this.Dealt = Dealt;
-		this.unDealt = unDealt;
-		ArrayList<Card> cardz = new ArrayList<Card>();
-		cardz.addAll(cardz);
+		for(int i = 0; i < suits.length; i++) 
+		{
+			for(int k = 0; k < ranks.length; k++) 
+			{
+				unDealt.add(new Card(suits[i], ranks[k], pointValues[k]));
+			}
+		}
 	}
 
 	public boolean isEmpty()
