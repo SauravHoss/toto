@@ -27,18 +27,18 @@ public class Card
 		return pointValue;
 	}
 
-	public static boolean equals(Card otherCard) 
+/*	public static boolean equals(Card a, Card b) 
 	{
-		if(Card.equals(otherCard)) 
+		if(getPointValue(a) == getPointValue(b)) 
 		{
 			return true;
 		}
 		return false;
 	}
-	
+*/	
 	public String toString() 
 	{
-		return "Card- \n" + "Suit: " + suit + "Value: " + pointValue + "Rank: " + rank; 		
+		return "\nCard- " + " Rank: " + suit + " Value: " + pointValue + " Suit: " + rank; 		
 	}
 
 }

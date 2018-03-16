@@ -38,8 +38,7 @@ public class Deck
 	{
 		if(unDealt.size() != 0)
 		{
-			unDealt.remove(0);
-			return unDealt.get(0);
+			return unDealt.remove(0);
 		}
 		else return null;
 	}
@@ -63,4 +62,12 @@ public class Deck
 			
 		}
 	}*/
+
+	@Override
+	public String toString() 
+	{
+		return "Undealt Deck: " + unDealt + "\n Dealt Deck: " + Dealt;
+	}
+	
+	
 }
