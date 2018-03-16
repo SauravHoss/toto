@@ -8,7 +8,8 @@ public class Deck
 	
 	public Deck(String [] ranks, String [] suits, int [] pointValues) 
 	{
-		this.unDealt<Card> = 
+		this.Dealt = new ArrayList<Card>();
+		this.unDealt = new ArrayList<Card>();
 		
 		for(int i = 0; i < suits.length; i++) 
 		{
