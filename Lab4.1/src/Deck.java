@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Deck 
 {
@@ -38,31 +39,45 @@ public class Deck
 	{
 		if(unDealt.size() != 0)
 		{
+			Card p = unDealt.get(0);
+			Dealt.add(p);
 			return unDealt.remove(0);
 		}
 		else return null;
 	}
-/*	
-	public shuffle() 
-	{	
-		unDealt.addAll(Dealt);
+
+	public ArrayList<Card> shuffler()
+	{
+		ArrayList <Card> a = new ArrayList<Card>();
 		
-		//shuffler
+		Random y = new Random();
+		Random z = new Random();
+
+		int op = y.nextInt(unDealt.size());
+	//	int po = z.nextInt(Dealt.size());
 		
+		for(int i = 0; i < unDealt.size(); i++) 
+		{
+			
+			a.add(unDealt.get(op));
+			unDealt.remove(unDealt.get(op));
+		}
 		
+	/*	
+		for(int i = 0; i < Dealt.size(); i++) 
+		{
+			
+			a.add(Dealt.get(po));
+			Dealt.remove(Dealt.get(po));
+		
+		}
+		Dealt.clear();
+		
+	*/	
+		
+		return a;
 	}
 	
-	private ssshuffler() 
-	{
-		Random a = new Random();
-		for (int i = 51; i > i; i++) 
-		{
-			a.nextInt(51);
-			Card temp = cardz[i];
-			
-		}
-	}*/
-
 	@Override
 	public String toString() 
 	{

@@ -1,44 +1,49 @@
-
 public class Card 
 {
 	private String rank;
 	private String suit;
-	private int pointValue;
+	private int value;
 	
-	public Card (String rank, String suit, int pointValue) 
+	public Card (String rank, String suit, int value)
 	{
 		this.rank = rank;
 		this.suit = suit;
-		this.pointValue = pointValue;
+		this.value = value;
 	}
-	
+
 	public String getRank() 
 	{
 		return rank;
 	}
-	
+
 	public String getSuit() 
 	{
 		return suit;
 	}
-	
-	public int getPointValue() 
+
+	public int getValue() 
 	{
-		return pointValue;
+		return value;
 	}
 
-/*	public static boolean equals(Card a, Card b) 
+	public boolean equals (Card x, Card y)
 	{
-		if(getPointValue(a) == getPointValue(b)) 
+		if (x.getValue() == y.getValue())
 		{
 			return true;
 		}
-		return false;
+		
+		else
+		{
+			return false;
+		}
 	}
-*/	
-	public String toString() 
+	
+	
+	
+	public String toString()
 	{
-		return "\nCard- " + " Rank: " + suit + " Value: " + pointValue + " Suit: " + rank; 		
+		return ("\n Card- " + " Suit: " + rank + " Rank: " + suit  + " Value: " + value);
 	}
-
+	
 }
