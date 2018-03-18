@@ -39,11 +39,8 @@ public class Card
 		}
 	}
 	
-	
-	
 	public String toString()
 	{
 		return ("\n Card- " + " Suit: " + rank + " Rank: " + suit  + " Value: " + value);
 	}
-	
 }

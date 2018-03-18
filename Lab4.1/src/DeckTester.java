@@ -1,21 +1,20 @@
 
 public class DeckTester 
 {
-
 	public static void main(String[] args) 
 	{
-		String [] ranks = {"Q", "K", "A"};
+		String [] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
 		String [] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-		int [] pointValues = {2,3,4,5};
-		
-		
+		int [] pointValues = {2,3,4,5,6,7,8,9,10,11,12,13,14};
 		
 		Deck z = new Deck(ranks, suits, pointValues);
 		
-		z.deal();
 		z.shuffler();
-		System.out.print(z);
-		
-	}
 
+		for(int i = 0; i < 52; i++) 
+		{
+			z.deal();
+		}
+		System.out.print(z);
+	}
 }

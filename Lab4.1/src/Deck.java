@@ -30,7 +30,7 @@ public class Deck
 		return false;
 	}
 
-	private int size() 
+	int size() 
 	{
 		return unDealt.size();
 	}
@@ -46,36 +46,23 @@ public class Deck
 		else return null;
 	}
 
-	public ArrayList<Card> shuffler()
+	public void shuffler()
 	{
-		ArrayList <Card> a = new ArrayList<Card>();
-		
-		Random y = new Random();
-		Random z = new Random();
-
-		int op = y.nextInt(unDealt.size());
-	//	int po = z.nextInt(Dealt.size());
-		
-		for(int i = 0; i < unDealt.size(); i++) 
-		{
-			
-			a.add(unDealt.get(op));
-			unDealt.remove(unDealt.get(op));
-		}
-		
-	/*	
-		for(int i = 0; i < Dealt.size(); i++) 
-		{
-			
-			a.add(Dealt.get(po));
-			Dealt.remove(Dealt.get(po));
-		
-		}
-		Dealt.clear();
-		
-	*/	
-		
-		return a;
+		  Random x = new Random();
+		 
+		  for(int i = Dealt.size()-1; i >= 0; i--)
+		   {
+		      unDealt.add(Dealt.remove(i));   
+		   }
+		 
+		  for (int k = 51; k > 0; k--)
+		  {
+			int op = x.nextInt(k);
+			Card ib = unDealt.get(op);
+			Card temp = unDealt.get(k);
+			unDealt.set(op, temp);
+			temp = unDealt.set(k, ib); 
+		  }
 	}
 	
 	@Override
@@ -83,6 +70,4 @@ public class Deck
 	{
 		return "Undealt Deck: " + unDealt + "\n Dealt Deck: " + Dealt;
 	}
-	
-	
 }
